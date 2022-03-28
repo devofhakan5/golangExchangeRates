@@ -11,7 +11,7 @@ import (
 func main() {
 	resp, err := http.Get("http://www.floatrates.com/daily/usd.xml")
 	if err != nil {
-		log.Fatal("ERROR :%s", err)
+		log.Fatal("ERROR:", err)
 	}
 	defer resp.Body.Close()
 	data, err := ioutil.ReadAll(resp.Body)
