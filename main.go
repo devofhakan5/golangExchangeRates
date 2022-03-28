@@ -8,8 +8,10 @@ import (
 	"net/http"
 )
 
+const url string = "http://www.floatrates.com/daily/usd.xml"
+
 func main() {
-	resp, err := http.Get("http://www.floatrates.com/daily/usd.xml")
+	resp, err := http.Get(url)
 	if err != nil {
 		log.Fatal("ERROR:", err)
 	}
